@@ -1,0 +1,765 @@
+body{
+    width: 100%;
+    height: 100vh;
+   
+}
+
+.scroll img{
+    width: 100%;
+}
+
+.home-bar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex-direction: column-reverse;
+  }
+    
+    .logo {
+      font-size: 135px;
+    }
+    
+    .nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      gap: 23px;
+    }
+    
+    .nav ul a {
+      margin-right: 20px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .nav ul a:hover {
+      color: gold
+    }
+    
+    #hamburger-menu {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #hamburger-menu span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: gold;
+      margin: 5px 0;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .home-bar {
+        flex-direction: column;
+      }
+    
+      .nav ul {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        flex-direction: column;
+        padding: 20px;
+        z-index: 100;
+      }
+    
+      .nav ul li {
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+      }
+    
+      .nav ul.show {
+        display: flex;
+      }
+    
+      #hamburger-menu {
+        display: block;
+      }
+    
+      .home-section {
+        margin-top: 100px;
+      }
+    }
+  
+
+    .wrapper{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        height:auto;
+    }
+    .uno{
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border-style: none;
+        color:#fff;
+        font-size: 23px;
+        letter-spacing: 3px;
+        font-family: 'Lato';
+        font-weight: 600;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        padding: 0px;
+        overflow: hidden;
+        transition: all .5s;
+        box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+
+
+        position: relative;
+    top: -160px;
+    left: -254px;
+    }
+    .uno span{
+        position: absolute;
+        display: block;
+    }
+    .uno span:nth-child(1){
+        height: 3px;
+        width:200px;
+        top:0px;
+        left:-200px;
+        background: linear-gradient(to right, rgba(0,0,0,0), #ffffff);
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+        animation: span1 2s linear infinite;
+        animation-delay: 1s;
+    }
+    
+    @keyframes span1{
+        0%{
+            left:-200px
+        }
+        100%{
+            left:200px;
+        }
+    }
+    .uno span:nth-child(2){
+        height: 70px;
+        width: 3px;
+        top:-70px;
+        right:0px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px;
+        animation: span2 2s linear infinite;
+        animation-delay: 2s;
+    }
+    @keyframes span2{
+        0%{
+            top:-70px;
+        }
+        100%{
+            top:70px;
+        }
+    }
+    .uno span:nth-child(3){
+        height:3px;
+        width:200px;
+        right:-200px;
+        bottom: 0px;
+        background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+        border-top-left-radius: 1px;
+        border-bottom-left-radius: 1px;
+        animation: span3 2s linear infinite;
+        animation-delay: 3s;
+    }
+    @keyframes span3{
+        0%{
+            right:-200px;
+        }
+        100%{
+            right: 200px;
+        }
+    }
+    
+    .uno span:nth-child(4){
+        height:70px;
+        width:3px;
+        bottom:-70px;
+        left:0px;
+        background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+        border-top-right-radius: 1px;
+        border-top-left-radius: 1px;
+        animation: span4 2s linear infinite;
+        animation-delay: 4s;
+    }
+    @keyframes span4{
+        0%{
+            bottom: -70px;
+        }
+        100%{
+            bottom:70px;
+        }
+    }
+    
+    .uno:hover{
+        transition: all .5s;
+        transform: rotate(-3deg) scale(1.1);
+        box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+    }
+    .uno:hover span{
+        animation-play-state: paused;
+    }
+    
+    
+    @media (max-width: 768px) { /* ajusta el valor según sea necesario */
+        .uno {
+            position: absolute;
+            top: -285px;
+            left: -65px;
+        }
+       }
+       
+
+       /*dos
+        */
+        .dos{
+            width: 34px;
+            height: 34px;
+            background: transparent;
+            border-style: none;
+            color:#fff;
+            font-size: 23px;
+            letter-spacing: 3px;
+            font-family: 'Lato';
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            padding: 0px;
+            overflow: hidden;
+            transition: all .5s;
+            box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    
+    
+            position: relative;
+            top: -92px;
+            left: 323px;
+        }
+        .dos span{
+            position: absolute;
+            display: block;
+        }
+        .dos span:nth-child(1){
+            height: 3px;
+            width:200px;
+            top:0px;
+            left:-200px;
+            background: linear-gradient(to right, rgba(0,0,0,0), #ffffff);
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span1 2s linear infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes span1{
+            0%{
+                left:-200px
+            }
+            100%{
+                left:200px;
+            }
+        }
+        .dos span:nth-child(2){
+            height: 70px;
+            width: 3px;
+            top:-70px;
+            right:0px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span2 2s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes span2{
+            0%{
+                top:-70px;
+            }
+            100%{
+                top:70px;
+            }
+        }
+        .dos span:nth-child(3){
+            height:3px;
+            width:200px;
+            right:-200px;
+            bottom: 0px;
+            background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            animation: span3 2s linear infinite;
+            animation-delay: 3s;
+        }
+        @keyframes span3{
+            0%{
+                right:-200px;
+            }
+            100%{
+                right: 200px;
+            }
+        }
+        
+        .dos span:nth-child(4){
+            height:70px;
+            width:3px;
+            bottom:-70px;
+            left:0px;
+            background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+            border-top-right-radius: 1px;
+            border-top-left-radius: 1px;
+            animation: span4 2s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes span4{
+            0%{
+                bottom: -70px;
+            }
+            100%{
+                bottom:70px;
+            }
+        }
+        
+        .dos:hover{
+            transition: all .5s;
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+        }
+        .dos:hover span{
+            animation-play-state: paused;
+        }
+        
+        
+        @media (max-width: 768px) { /* ajusta el valor según sea necesario */
+            .dos {
+                position: absolute;
+                top: -212px;
+                left: 260px;
+             }
+           }
+
+
+           @media (max-width: 768px) { /* ajusta el valor según sea necesario */
+          
+            .scroll img {
+                width: 150%;
+                height: 150vh;
+            }
+    
+          }
+
+
+
+          
+       /*tres
+        */
+        .tres{
+            width: 34px;
+            height: 34px;
+            background: transparent;
+            border-style: none;
+            color:#fff;
+            font-size: 23px;
+            letter-spacing: 3px;
+            font-family: 'Lato';
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            padding: 0px;
+            overflow: hidden;
+            transition: all .5s;
+            box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    
+            top: 157px;
+            left: -273px;
+            position: relative;
+        }
+        .tres span{
+            position: absolute;
+            display: block;
+        }
+        .tres span:nth-child(1){
+            height: 3px;
+            width:200px;
+            top:0px;
+            left:-200px;
+            background: linear-gradient(to right, rgba(0,0,0,0), #ffffff);
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span1 2s linear infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes span1{
+            0%{
+                left:-200px
+            }
+            100%{
+                left:200px;
+            }
+        }
+        .tres span:nth-child(2){
+            height: 70px;
+            width: 3px;
+            top:-70px;
+            right:0px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span2 2s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes span2{
+            0%{
+                top:-70px;
+            }
+            100%{
+                top:70px;
+            }
+        }
+        .tres span:nth-child(3){
+            height:3px;
+            width:200px;
+            right:-200px;
+            bottom: 0px;
+            background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            animation: span3 2s linear infinite;
+            animation-delay: 3s;
+        }
+        @keyframes span3{
+            0%{
+                right:-200px;
+            }
+            100%{
+                right: 200px;
+            }
+        }
+        
+        .tres span:nth-child(4){
+            height:70px;
+            width:3px;
+            bottom:-70px;
+            left:0px;
+            background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+            border-top-right-radius: 1px;
+            border-top-left-radius: 1px;
+            animation: span4 2s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes span4{
+            0%{
+                bottom: -70px;
+            }
+            100%{
+                bottom:70px;
+            }
+        }
+        
+        .tres:hover{
+            transition: all .5s;
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+        }
+        .tres:hover span{
+            animation-play-state: paused;
+        }
+        
+        
+        /*for
+        */
+        .for{
+            width: 34px;
+            height: 34px;
+            background: transparent;
+            border-style: none;
+            color:#fff;
+            font-size: 23px;
+            letter-spacing: 3px;
+            font-family: 'Lato';
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            padding: 0px;
+            overflow: hidden;
+            transition: all .5s;
+            box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    
+            top: 339px;
+    left: 8px;
+            position: relative;
+        }
+        .for span{
+            position: absolute;
+            display: block;
+        }
+        .for span:nth-child(1){
+            height: 3px;
+            width:200px;
+            top:0px;
+            left:-200px;
+            background: linear-gradient(to right, rgba(0,0,0,0), #ffffff);
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span1 2s linear infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes span1{
+            0%{
+                left:-200px
+            }
+            100%{
+                left:200px;
+            }
+        }
+        .for span:nth-child(2){
+            height: 70px;
+            width: 3px;
+            top:-70px;
+            right:0px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span2 2s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes span2{
+            0%{
+                top:-70px;
+            }
+            100%{
+                top:70px;
+            }
+        }
+        .for span:nth-child(3){
+            height:3px;
+            width:200px;
+            right:-200px;
+            bottom: 0px;
+            background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            animation: span3 2s linear infinite;
+            animation-delay: 3s;
+        }
+        @keyframes span3{
+            0%{
+                right:-200px;
+            }
+            100%{
+                right: 200px;
+            }
+        }
+        
+        .for span:nth-child(4){
+            height:70px;
+            width:3px;
+            bottom:-70px;
+            left:0px;
+            background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+            border-top-right-radius: 1px;
+            border-top-left-radius: 1px;
+            animation: span4 2s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes span4{
+            0%{
+                bottom: -70px;
+            }
+            100%{
+                bottom:70px;
+            }
+        }
+        
+        .for:hover{
+            transition: all .5s;
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+        }
+        .for:hover span{
+            animation-play-state: paused;
+        }
+        
+         
+        /*five
+        */
+        .five{
+            width: 34px;
+            height: 34px;
+            background: transparent;
+            border-style: none;
+            color:#fff;
+            font-size: 23px;
+            letter-spacing: 3px;
+            font-family: 'Lato';
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            padding: 0px;
+            overflow: hidden;
+            transition: all .5s;
+            box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    
+            top: 644px;
+            left: 423px;
+            position: relative;
+        }
+        .five span{
+            position: absolute;
+            display: block;
+        }
+        .five span:nth-child(1){
+            height: 3px;
+            width:200px;
+            top:0px;
+            left:-200px;
+            background: linear-gradient(to right, rgba(0,0,0,0), #ffffff);
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span1 2s linear infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes span1{
+            0%{
+                left:-200px
+            }
+            100%{
+                left:200px;
+            }
+        }
+        .five span:nth-child(2){
+            height: 70px;
+            width: 3px;
+            top:-70px;
+            right:0px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), #ffffff);
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            animation: span2 2s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes span2{
+            0%{
+                top:-70px;
+            }
+            100%{
+                top:70px;
+            }
+        }
+        .five span:nth-child(3){
+            height:3px;
+            width:200px;
+            right:-200px;
+            bottom: 0px;
+            background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            animation: span3 2s linear infinite;
+            animation-delay: 3s;
+        }
+        @keyframes span3{
+            0%{
+                right:-200px;
+            }
+            100%{
+                right: 200px;
+            }
+        }
+        
+        .five span:nth-child(4){
+            height:70px;
+            width:3px;
+            bottom:-70px;
+            left:0px;
+            background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+            border-top-right-radius: 1px;
+            border-top-left-radius: 1px;
+            animation: span4 2s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes span4{
+            0%{
+                bottom: -70px;
+            }
+            100%{
+                bottom:70px;
+            }
+        }
+        
+        .five:hover{
+            transition: all .5s;
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+        }
+        .five:hover span{
+            animation-play-state: paused;
+        }
+        
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        
+
+
+
+
+
+        @media (max-width: 768px) { /* ajusta el valor según sea necesario */
+            .five {
+                left: 324px;
+             }
+
+             .for {
+                top: 287px;
+                left: 106px;
+             }
+
+             .tres {
+                top: 93px;
+                left: -32px;
+             }
+           }
+       
+       
+
+
+
+            
+          
+        
+    
+    
+   
